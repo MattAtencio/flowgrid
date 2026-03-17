@@ -531,6 +531,13 @@ export default function FlowGrid() {
         <div className={styles.headerRight}>
           <button
             className={styles.iconBtn}
+            onClick={() => setShowOnboarding(true)}
+            title="How to play"
+          >
+            {"\u2753"}
+          </button>
+          <button
+            className={styles.iconBtn}
             onClick={() => setTimerEnabled((t) => !t)}
             title="Toggle timer"
           >
@@ -725,34 +732,92 @@ export default function FlowGrid() {
       {showOnboarding && (
         <div className={styles.overlay} onClick={dismissOnboarding}>
           <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-            <h2 className={styles.modalTitle}>How to Play</h2>
-            <div className={styles.onboardingSteps}>
-              <div className={styles.step}>
-                <span className={styles.stepNum}>1</span>
-                <span>Connect matching color dots by drawing a path</span>
+            {/* Title */}
+            <div style={{ textAlign: "center", marginBottom: 18 }}>
+              <div style={{ fontSize: 32, fontWeight: 400, fontFamily: "var(--font-dm-serif), serif", color: "#22c55e", lineHeight: 1 }}>
+                FlowGrid
               </div>
-              <div className={styles.step}>
-                <span className={styles.stepNum}>2</span>
-                <span>Paths go horizontal/vertical only — no diagonals</span>
-              </div>
-              <div className={styles.step}>
-                <span className={styles.stepNum}>3</span>
-                <span>Paths cannot cross or overlap each other</span>
-              </div>
-              <div className={styles.step}>
-                <span className={styles.stepNum}>4</span>
-                <span>Fill every cell on the grid to win</span>
+              <div style={{ fontFamily: "var(--font-outfit), sans-serif", fontSize: 11, color: "#555577", marginTop: 6 }}>
+                Daily path puzzle
               </div>
             </div>
-            <p className={styles.onboardingTip}>
-              Tap a dot and drag to draw. Drag backward to undo. Drawing through another path erases it.
-            </p>
+
+            {/* Description */}
+            <div style={{ fontFamily: "var(--font-outfit), sans-serif", fontSize: 13, color: "#c8c8e0", lineHeight: 1.6, marginBottom: 14 }}>
+              Connect matching color dots by dragging paths across the grid.
+              Fill <span style={{ color: "#22c55e", fontWeight: 600 }}>every cell</span> to solve the puzzle.
+            </div>
+
+            {/* Animated demo grid */}
+            <div style={{ background: "#07070f", borderRadius: 14, padding: 14, marginBottom: 14 }}>
+              <div className={styles.demoGrid}>
+                {/* Row 0 */}
+                <div className={`${styles.demoCell} ${styles.demoCellEndpoint}`} style={{ "--dc": "#ef4444" }}>
+                  <div className={styles.demoDot} />
+                </div>
+                <div className={`${styles.demoCell} ${styles.demoCellPathRed1}`} style={{ "--dc": "#ef4444" }} />
+                <div className={`${styles.demoCell} ${styles.demoCellPathRed2}`} style={{ "--dc": "#ef4444" }} />
+
+                {/* Row 1 */}
+                <div className={styles.demoCell} />
+                <div className={styles.demoCell} />
+                <div className={`${styles.demoCell} ${styles.demoCellPathRed3}`} style={{ "--dc": "#ef4444" }} />
+
+                {/* Row 2 */}
+                <div className={`${styles.demoCell} ${styles.demoCellEndpointBlue}`} style={{ "--dc": "#3b82f6" }}>
+                  <div className={styles.demoDotBlue} />
+                </div>
+                <div className={styles.demoCell} />
+                <div className={`${styles.demoCell} ${styles.demoCellEndpoint}`} style={{ "--dc": "#ef4444" }}>
+                  <div className={styles.demoDot} />
+                </div>
+              </div>
+
+              <div style={{ fontFamily: "var(--font-outfit), sans-serif", fontSize: 10, color: "#555577", textAlign: "center", marginTop: 8 }}>
+                Drag from dot to dot — fill every cell
+              </div>
+            </div>
+
+            {/* Rules */}
+            <div style={{ fontFamily: "var(--font-outfit), sans-serif", fontSize: 12, color: "#555577", lineHeight: 1.6 }}>
+              <div style={{ display: "flex", gap: 8, alignItems: "flex-start", marginBottom: 7 }}>
+                <span style={{ color: "#22c55e", fontSize: 14, lineHeight: 1 }}>{"\u2194\uFE0F"}</span>
+                <span><span style={{ color: "#c8c8e0" }}>Drag</span> from a dot to draw a path to its matching pair</span>
+              </div>
+              <div style={{ display: "flex", gap: 8, alignItems: "flex-start", marginBottom: 7 }}>
+                <span style={{ color: "#ef4444", fontSize: 14, lineHeight: 1 }}>{"\u{1F6AB}"}</span>
+                <span>Paths can&apos;t <span style={{ color: "#c8c8e0" }}>cross</span> — drawing through erases the other path</span>
+              </div>
+              <div style={{ display: "flex", gap: 8, alignItems: "flex-start", marginBottom: 7 }}>
+                <span style={{ color: "#eab308", fontSize: 14, lineHeight: 1 }}>{"\u2B1C"}</span>
+                <span>Every cell must be <span style={{ color: "#c8c8e0" }}>filled</span> — no empty spaces</span>
+              </div>
+              <div style={{ display: "flex", gap: 8, alignItems: "flex-start" }}>
+                <span style={{ color: "#a855f7", fontSize: 14, lineHeight: 1 }}>{"\u{1F525}"}</span>
+                <span>Play daily to build your <span style={{ color: "#c8c8e0" }}>streak</span> and earn XP</span>
+              </div>
+            </div>
+
+            {/* Play button */}
             <button
-              className={`${styles.btn} ${styles.btnPrimary}`}
-              style={{ marginTop: 16, width: "100%" }}
               onClick={dismissOnboarding}
+              style={{
+                width: "100%",
+                padding: 14,
+                marginTop: 16,
+                background: "linear-gradient(135deg, #064e3b, #22c55e)",
+                border: "none",
+                borderRadius: 14,
+                color: "#fff",
+                fontFamily: "var(--font-outfit), sans-serif",
+                fontWeight: 700,
+                fontSize: 13,
+                letterSpacing: 2,
+                cursor: "pointer",
+                boxShadow: "0 6px 24px rgba(34,197,94,0.35)",
+              }}
             >
-              Got it!
+              PLAY
             </button>
           </div>
         </div>

@@ -428,45 +428,79 @@
   color: #22c55e;
 }
 
-/* ── Onboarding ── */
+/* ── Onboarding Demo Grid ── */
 
-.onboardingSteps {
-  text-align: left;
-  margin: 16px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.demoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
 }
 
-.step {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.4;
-}
-
-.stepNum {
-  flex-shrink: 0;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: rgba(34, 197, 94, 0.15);
-  color: #22c55e;
+.demoCell {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.7rem;
-  font-weight: 600;
 }
 
-.onboardingTip {
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.35);
-  margin-top: 12px;
-  line-height: 1.4;
-  font-style: italic;
+.demoDot {
+  width: 55%;
+  height: 55%;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 8px #ef4444;
+}
+
+.demoDotBlue {
+  width: 55%;
+  height: 55%;
+  border-radius: 50%;
+  background: #3b82f6;
+  box-shadow: 0 0 8px #3b82f6;
+}
+
+/* Animated path cells — red path draws from [0,0] → [0,1] → [0,2] → [1,2] → [2,2] */
+.demoCellEndpoint {
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.demoCellEndpointBlue {
+  background: rgba(59, 130, 246, 0.15);
+}
+
+.demoCellPathRed1 {
+  animation: demoFillRed 5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.demoCellPathRed2 {
+  animation: demoFillRed 5s ease-in-out infinite;
+  animation-delay: 1.0s;
+}
+
+.demoCellPathRed3 {
+  animation: demoFillRed 5s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes demoFillRed {
+  0%, 8% {
+    background: transparent;
+  }
+  12%, 70% {
+    background: rgba(239, 68, 68, 0.35);
+  }
+  80%, 100% {
+    background: transparent;
+  }
 }
 
 /* ── Animations ── */
