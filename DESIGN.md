@@ -190,6 +190,20 @@ puzzle = {
 - [ ] Undo last path draw
 - [ ] Sound effects (subtle, toggleable)
 
+### V4 — Future Ideas
+- [ ] **Multiplayer race** — two players solve same puzzle, first to finish wins (WebSocket or shared seed + honor system)
+- [ ] **Puzzle creator** — let users design puzzles, validate with solver, share via URL code
+- [ ] **Daily difficulty ramp** — Mon=5x5, Tue=6x6, Wed=7x7, Thu-Fri=8x8 (like NYT crossword)
+- [ ] **Achievement system** — badges for milestones (first solve, 10-streak, all sizes cleared, speed runs)
+- [ ] **Animated path replay** — after solving, replay your solution as a smooth animation
+- [ ] **Ghost mode** — see your previous best solve path as a faint overlay while replaying
+- [ ] **Seasonal themes** — holiday color palettes, themed backgrounds
+- [ ] **Offline puzzle packs** — download bundles for airplane mode (already works via SW, but curated packs)
+- [ ] **Wider grid support** — 9x9, 10x10 for hardcore players
+- [ ] **Move-limited challenge** — par system, solve in N moves or fewer for bonus XP
+- [ ] **Friends list** — compare daily scores with friends (could use simple share codes, no backend)
+- [ ] **Accessibility** — screen reader support, keyboard navigation (arrow keys to select cell, enter to place)
+
 ---
 
 ## Shareable Results Format
