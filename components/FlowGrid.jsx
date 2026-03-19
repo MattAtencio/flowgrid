@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, useRef, useEffect, useMemo } from "react";
+import Link from "next/link";
 import { getDailyPuzzle, getPuzzle, PUZZLES } from "@/data/puzzles";
 import styles from "./FlowGrid.module.css";
 
@@ -529,6 +530,9 @@ export default function FlowGrid() {
       <header className={styles.header}>
         <h1 className={styles.title}>FlowGrid</h1>
         <div className={styles.headerRight}>
+          <Link href="/help" className={styles.guideLink} title="Guide">
+            GUIDE
+          </Link>
           <button
             className={styles.iconBtn}
             onClick={() => setShowOnboarding(true)}

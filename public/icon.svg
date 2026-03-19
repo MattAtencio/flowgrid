@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a14"/>
+      <stop offset="100%" stop-color="#07070f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+
+  <!-- Grid lines -->
+  <g stroke="rgba(255,255,255,0.06)" stroke-width="2">
+    <!-- Vertical -->
+    <line x1="128" y1="64" x2="128" y2="448"/>
+    <line x1="208" y1="64" x2="208" y2="448"/>
+    <line x1="288" y1="64" x2="288" y2="448"/>
+    <line x1="368" y1="64" x2="368" y2="448"/>
+    <!-- Horizontal -->
+    <line x1="64" y1="128" x2="448" y2="128"/>
+    <line x1="64" y1="208" x2="448" y2="208"/>
+    <line x1="64" y1="288" x2="448" y2="288"/>
+    <line x1="64" y1="368" x2="448" y2="368"/>
+  </g>
+
+  <!-- Grid border -->
+  <rect x="64" y="64" width="384" height="384" rx="16" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="3"/>
+
+  <!-- Green flow path: top-left to bottom-right area -->
+  <path d="M 96 96 L 96 176 L 96 256 L 176 256 L 256 256"
+        stroke="#22c55e" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.7"/>
+  <!-- Green endpoints -->
+  <circle cx="96" cy="96" r="22" fill="#22c55e" opacity="1">
+    <animate attributeName="opacity" values="0.85;1;0.85" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="96" cy="96" r="22" fill="none" stroke="#22c55e" stroke-width="0" opacity="0.4">
+    <animate attributeName="r" values="22;30;22" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0;0.4" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="256" cy="256" r="22" fill="#22c55e" opacity="1"/>
+
+  <!-- Red flow path: top-right to mid-right -->
+  <path d="M 416 96 L 336 96 L 336 176 L 336 256 L 416 256 L 416 336"
+        stroke="#ef4444" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.7"/>
+  <!-- Red endpoints -->
+  <circle cx="416" cy="96" r="22" fill="#ef4444" opacity="1"/>
+  <circle cx="416" cy="336" r="22" fill="#ef4444" opacity="1">
+    <animate attributeName="opacity" values="0.85;1;0.85" dur="3s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+
+  <!-- Blue flow path: bottom-left area -->
+  <path d="M 96 416 L 176 416 L 176 336 L 256 336 L 256 416 L 336 416 L 416 416"
+        stroke="#3b82f6" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.7"/>
+  <!-- Blue endpoints -->
+  <circle cx="96" cy="416" r="22" fill="#3b82f6" opacity="1"/>
+  <circle cx="416" cy="416" r="22" fill="#3b82f6" opacity="1">
+    <animate attributeName="opacity" values="0.85;1;0.85" dur="3s" repeatCount="indefinite" begin="2s"/>
+  </circle>
+
+  <!-- Yellow flow: small connection -->
+  <path d="M 176 96 L 256 96 L 256 176 L 176 176 L 96 176"
+        stroke="#eab308" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.7"/>
+  <!-- Yellow endpoints (reusing the path start/end positions that make sense on the grid) -->
+  <circle cx="176" cy="96" r="22" fill="#eab308" opacity="1"/>
+  <circle cx="96" cy="176" r="22" fill="#eab308" opacity="1"/>
+
+  <!-- Purple flow -->
+  <path d="M 96 336 L 176 336 L 176 256"
+        stroke="#a855f7" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.7"/>
+  <circle cx="96" cy="336" r="22" fill="#a855f7" opacity="1"/>
+  <circle cx="176" cy="256" r="22" fill="#a855f7" opacity="1"/>
+</svg>

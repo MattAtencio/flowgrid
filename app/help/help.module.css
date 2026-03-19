@@ -1,0 +1,187 @@
+/* ── Help Page ── */
+
+.container {
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 16px 20px 40px;
+  min-height: 100dvh;
+  animation: fadeUp 0.4s ease-out;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-family: var(--font-dm-serif), serif;
+  font-size: 1.5rem;
+  color: #22c55e;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ── Sections ── */
+
+.section {
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  font-family: var(--font-dm-serif), serif;
+  font-size: 1.15rem;
+  color: #22c55e;
+  margin-bottom: 10px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.text {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+}
+
+/* ── Steps ── */
+
+.steps {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  padding-left: 20px;
+  margin: 12px 0 16px;
+}
+
+.steps li {
+  margin-bottom: 6px;
+}
+
+.steps strong {
+  color: #e8e8f0;
+}
+
+/* ── Rules ── */
+
+.ruleList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rule {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.6;
+}
+
+.rule strong {
+  color: #e8e8f0;
+}
+
+.ruleIcon {
+  font-size: 1rem;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+/* ── Tips ── */
+
+.tipList {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  padding-left: 18px;
+  list-style: disc;
+}
+
+.tipList li {
+  margin-bottom: 10px;
+}
+
+.tipList strong {
+  color: #e8e8f0;
+}
+
+/* ── Game Modes ── */
+
+.modeItem {
+  margin-bottom: 14px;
+}
+
+.modeItem:last-child {
+  margin-bottom: 0;
+}
+
+.modeName {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e8e8f0;
+  margin-bottom: 4px;
+}
+
+/* ── Back Button ── */
+
+.backRow {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.backBtn {
+  display: inline-block;
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #22c55e;
+  padding: 12px 32px;
+  border-radius: 14px;
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.backBtn:hover {
+  background: rgba(34, 197, 94, 0.25);
+  color: #4ade80;
+}
+
+.backBtn:active {
+  transform: scale(0.96);
+}
+
+/* ── Animation ── */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

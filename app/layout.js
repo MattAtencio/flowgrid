@@ -37,6 +37,10 @@ export const metadata = {
     description:
       "Connect color pairs on a grid without crossing paths.",
   },
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export const viewport = {
