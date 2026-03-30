@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/MattAtencio/portfolio/main/schemas/portfolio.schema.json",
+  "title": "FlowGrid",
+  "tagline": "Connect color pairs on a grid without crossing paths",
+  "description": "FlowGrid challenges players to connect matching color pairs on a grid without crossing any paths. Features daily puzzles and increasing difficulty levels.",
+  "category": "games",
+  "status": "active",
+  "techStack": [
+    "Next.js",
+    "JavaScript",
+    "PWA",
+    "CSS Modules"
+  ],
+  "liveUrl": "https://flowgrid.mattatencio.com",
+  "highlights": [
+    "Procedurally generated puzzles with difficulty scaling",
+    "Smooth touch-based path drawing",
+    "PWA with offline play"
+  ],
+  "isPublic": true,
+  "startDate": "2025-01",
+  "featured": false
+}
