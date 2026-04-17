@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/MattAtencio/portfolio/main/schemas/project.schema.json",
+  "id": "flowgrid",
+  "name": "FlowGrid",
+  "kind": "project",
+  "type": "game",
+  "status": "active",
+  "group": "games-daily-puzzles",
+  "tags": ["daily-puzzle", "public"]
+}
